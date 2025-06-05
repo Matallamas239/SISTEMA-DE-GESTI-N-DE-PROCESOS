@@ -1,0 +1,28 @@
+// -------------------- COLA --------------------
+
+// Insertar en cola (FIFO)
+void ingresarCola() {
+    // Crear nuevo nodo
+    Nodo* nuevo = new Nodo();
+
+    // Solicitar datos al usuario
+    cout << "Ingrese ID: ";
+    cin >> nuevo->id;
+    cout << "Ingrese Nombre: ";
+    cin >> nuevo->nombre;
+
+    // El nuevo nodo siempre será el último, así que su siguiente es NULL
+    nuevo->siguiente = NULL;
+
+    // Si la cola está vacía, el nuevo nodo será el primero y el último
+    if (frente == NULL) {
+        frente = nuevo;
+        final = nuevo;
+    } else {
+        // Si no, se enlaza al final de la cola
+        final->siguiente = nuevo;
+        final = nuevo;
+    }
+
+    cout << "Elemento ingresado a la cola.\n";
+}
