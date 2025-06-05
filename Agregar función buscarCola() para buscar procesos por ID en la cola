@@ -1,0 +1,23 @@
+// Buscar en cola por ID
+void buscarCola() {
+    int idBuscado;
+    cout << "Ingrese ID a buscar en la cola: ";
+    cin >> idBuscado;
+
+    Nodo* aux = frente;   // Iniciamos desde el frente de la cola
+    bool encontrado = false;
+
+    // Recorrer la cola mientras haya nodos
+    while (aux != NULL) {
+        if (aux->id == idBuscado) {
+            // Si encontramos el ID, mostramos el nombre
+            cout << "Proceso encontrado: " << aux->nombre << endl;
+            encontrado = true;
+            break;
+        }
+        aux = aux->siguiente;
+    }
+
+    if (!encontrado)
+        cout << "ID no encontrado en la cola.\n";
+}
