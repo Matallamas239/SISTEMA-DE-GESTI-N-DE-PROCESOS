@@ -1,0 +1,25 @@
+// Procesar (eliminar) todos los elementos de la cola - FIFO
+void procesarCola() {
+    if (frente == NULL) {
+        cout << "La cola esta vacia. No hay procesos por procesar.\n";
+        return;
+    }
+
+    cout << "Procesando datos en la cola:\n";
+
+    // Mientras haya elementos en la cola
+    while (frente != NULL) {
+        // Mostrar el proceso actual
+        cout << "Procesando ID: " << frente->id << ", Nombre: " << frente->nombre << endl;
+
+        // Eliminar nodo
+        Nodo* temp = frente;
+        frente = frente->siguiente;
+        delete temp;
+    }
+
+    // Asegurarse de que el puntero final también quede en NULL
+    final = NULL;
+
+    cout << "Todos los procesos de la cola fueron procesados y eliminados.\n";
+}
