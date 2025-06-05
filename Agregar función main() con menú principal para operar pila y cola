@@ -1,0 +1,34 @@
+// -------------------- MENÚ PRINCIPAL --------------------
+
+int main() {
+    int opcion;
+    do {
+        cout << "\nMENU PRINCIPAL\n";
+        cout << "1. Ingresar proceso a pila\n";
+        cout << "2. Ingresar proceso a cola\n";
+        cout << "3. Buscar proceso en pila\n";
+        cout << "4. Buscar proceso en cola\n";
+        cout << "5. Actualizar proceso en pila\n";
+        cout << "6. Actualizar proceso en cola\n";
+        cout << "7. Procesar datos de la pila\n";
+        cout << "8. Procesar datos de la cola\n";
+        cout << "9. Salir\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1: ingresarPila(); break;
+            case 2: ingresarCola(); break;
+            case 3: buscarPila(); break;
+            case 4: buscarCola(); break;
+            case 5: actualizarPila(); break;
+            case 6: actualizarCola(); break;
+            case 7: procesarPila(); break;
+            case 8: procesarCola(); break;
+            case 9: cout << "Saliendo...\n"; break;
+            default: cout << "Opcion no valida\n";
+        }
+    } while (opcion != 9);
+
+    return 0;
+}
