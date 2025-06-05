@@ -1,0 +1,21 @@
+// -------------------- PILA --------------------
+
+// Insertar en pila (LIFO)
+void ingresarPila() {
+    // Crear nuevo nodo
+    Nodo* nuevo = new Nodo();
+
+    // Solicitar datos al usuario
+    cout << "Ingrese ID: ";
+    cin >> nuevo->id;
+    cout << "Ingrese Nombre: ";
+    cin >> nuevo->nombre;
+
+    // Apilar: enlazar el nuevo nodo al tope actual
+    nuevo->siguiente = tope;
+
+    // Mover el tope al nuevo nodo
+    tope = nuevo;
+
+    cout << "Elemento ingresado a la pila.\n";
+}
