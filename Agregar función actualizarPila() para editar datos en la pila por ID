@@ -1,0 +1,27 @@
+// Actualizar un proceso en la pila por ID
+void actualizarPila() {
+    int idBuscado;
+    cout << "Ingrese ID a actualizar en la pila: ";
+    cin >> idBuscado;
+
+    Nodo* aux = tope;    // Iniciamos desde el tope de la pila
+    bool encontrado = false;
+
+    // Recorrer la pila buscando el ID
+    while (aux != NULL) {
+        if (aux->id == idBuscado) {
+            // Si se encuentra, solicitar el nuevo nombre
+            cout << "Nuevo nombre: ";
+            cin >> aux->nombre;
+            encontrado = true;
+            break;
+        }
+        aux = aux->siguiente;
+    }
+
+    // Mostrar resultado
+    if (encontrado)
+        cout << "Elemento actualizado en la pila.\n";
+    else
+        cout << "ID no encontrado en la pila.\n";
+}
