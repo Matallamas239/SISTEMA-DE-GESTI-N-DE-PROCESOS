@@ -1,0 +1,13 @@
+// Procesar (eliminar) todos los elementos de la pila - LIFO
+void procesarPila() {
+    if (tope == NULL) {
+        cout << "La pila esta vacia. No hay procesos por procesar.\n";
+        return;
+    }
+
+    cout << "Procesando datos en la pila:\n";
+
+    // Mientras haya elementos en la pila
+    while (tope != NULL) {
+        // Mostrar el proceso actual
+        co
