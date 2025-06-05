@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Estructura de nodo para pila y cola
+struct Nodo {
+    int id;              // ID del proceso
+    string nombre;       // Nombre del proceso
+    Nodo* siguiente;     // Puntero al siguiente nodo
+};
+
+// Declaración de punteros globales para pila y cola
+Nodo* tope = NULL;      // Puntero al tope de la pila (LIFO)
+Nodo* frente = NULL;    // Puntero al inicio de la cola (FIFO)
+Nodo* final = NULL;     // Puntero al final de la cola (FIFO)
