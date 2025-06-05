@@ -1,0 +1,14 @@
+// Buscar en pila por ID
+void buscarPila() {
+    int idBuscado;
+    cout << "Ingrese ID a buscar en la pila: ";
+    cin >> idBuscado;
+
+    Nodo* aux = tope;     // Iniciamos desde el tope de la pila
+    bool encontrado = false;
+
+    // Recorrer la pila mientras haya nodos
+    while (aux != NULL) {
+        if (aux->id == idBuscado) {
+            // Si encontramos el ID, mostramos el nombre
+            cout <<
