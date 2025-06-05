@@ -1,0 +1,27 @@
+// Actualizar un proceso en la cola por ID
+void actualizarCola() {
+    int idBuscado;
+    cout << "Ingrese ID a actualizar en la cola: ";
+    cin >> idBuscado;
+
+    Nodo* aux = frente;  // Iniciamos desde el frente de la cola
+    bool encontrado = false;
+
+    // Recorrer la cola buscando el ID
+    while (aux != NULL) {
+        if (aux->id == idBuscado) {
+            // Si se encuentra, pedir nuevo nombre
+            cout << "Nuevo nombre: ";
+            cin >> aux->nombre;
+            encontrado = true;
+            break;
+        }
+        aux = aux->siguiente;
+    }
+
+    // Resultado del proceso
+    if (encontrado)
+        cout << "Elemento actualizado en la cola.\n";
+    else
+        cout << "ID no encontrado en la cola.\n";
+}
